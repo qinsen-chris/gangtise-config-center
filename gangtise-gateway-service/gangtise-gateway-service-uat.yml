@@ -1,0 +1,18 @@
+server:
+  port: 8083
+
+ignore:
+  urls:
+    - /**/*.css
+    - /oauth/**
+    - /auth/oauth/**
+    - /actuator/**
+    - /hystrix/**
+    - /swagger-resource/**
+    - /swagger-ui.html/**
+    - /webjars/**
+    - /swagger-resources/**
+    - /v2/api-docs
+    - /favicon.ico 
+  status:
+    - /auth/oauth/token
