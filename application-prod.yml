@@ -1,0 +1,68 @@
+spring:
+    # jackson时间格式化
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    servlet:
+      multipart:
+        max-file-size: 100MB
+        max-request-size: 100MB
+        enabled: true
+    mvc:
+        throw-exception-if-no-handler-found: true
+        static-path-pattern: /static/**
+    resources:
+        add-mappings: false
+
+feign:
+  hystrix:
+    enabled: false
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false  
+      
+ribbon:  
+  ReadTimeout: 20000  
+  ConnectTimeout: 20000 
+        
+hystrix:
+  threadpool:
+    default:
+      coreSize: 500
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml,/mapper/*/*Mapper.xml
+  typeAliasesPackage: com.gangtise.**.model
+  typeEnumsPackage: com.gangtise.**.vo.enums
+
+#logback获取不到config上的配置
+rsc:
+  log:
+#    logstash:
+#      url: 58.213.91.105:9003
+    flatfile:
+      path: /alidata1/logs
+
+redis:
+  server:
+    ip: 127.0.0.1
+    port: 6379
+    password: 
