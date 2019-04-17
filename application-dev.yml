@@ -63,6 +63,6 @@ rsc:
 
 redis:
   server:
-    ip: 58.213.91.96
-    port: 29012
+    ip: 192.168.1.124
+    port: 6379
     password: 

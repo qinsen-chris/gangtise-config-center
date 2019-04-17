@@ -1,10 +1,6 @@
 server:
   port: 1925
-  
-#spring:
-#  redis:
-#    host: 58.213.91.96
-#    port: 29012  
+   
 
 ignore:
   urls:
