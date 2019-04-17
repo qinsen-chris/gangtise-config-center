@@ -1,0 +1,22 @@
+server:
+  port: 10010
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+ignore:
+  urls:
+    - /**/*.css
+    - /oauth/**
+    - /auth/oauth/**
+    - /actuator/**
+    - /hystrix/**
+    - /rscLogin
+    - /captcha.jpg
+    - /swagger-resource/**
+    - /swagger-ui.html/**
+    - /webjars/**
+    - /swagger-resources/**
+    - /v2/api-docs
