@@ -8,9 +8,9 @@ spring:
 #            enabled: true
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost/rsc_soum?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://localhost/gangtise_soum?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
         username: root
-        password: 
+        password: 123456
         initial-size: 10
         max-active: 100
         min-idle: 10
